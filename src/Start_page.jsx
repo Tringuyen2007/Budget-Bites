@@ -7,7 +7,7 @@ function Start_page() {
 
   return (
     <div class="app-container">
-      <CalorieDisplay />{calories}
+      <CalorieDisplay CurrentCalories={calories} />
       <nav className="navbar">Budget Bites</nav>
     </div>
   )
