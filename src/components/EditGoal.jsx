@@ -11,7 +11,7 @@ function EditGoal({ updateCalories }) {
     }
 
     return (
-        <div className="card" style={{ marginTop: '20px' }}>
+        <div className="card" style={{ marginTop: '20px', textAlign: 'center' }}>
             <h3>Update Goal</h3>
             <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '10px' }}>
                 <input

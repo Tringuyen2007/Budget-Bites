@@ -1,6 +1,6 @@
 function CalorieDisplay({ CurrentCalories }) {
     return (
-        <div className="calorie-card">
+        <div className="card text-center">
             <h2>Calories Remaining</h2>
             <p className="large-number">{CurrentCalories}</p>
         </div>
