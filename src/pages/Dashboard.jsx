@@ -19,8 +19,8 @@ function Dashboard() {
       <AddFood addFoodItem={addFoodItem} />
 
       <div className="card" style={{ marginTop: '20px' }}>
-        <h3>History</h3>
-        {foodLog.length === 0 ? <p>No food logged yet.</p> : (
+        <h3 style={{ textAlign: 'center' }}>History</h3>
+        {foodLog.length === 0 ? <p style={{ textAlign: 'center' }}>No food logged yet.</p> : (
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {foodLog.map((item, index) => (
               <li key={index} style={{ borderBottom: '1px solid #eee', padding: '10px 0', display: 'flex', justifyContent: 'space-between' }}>

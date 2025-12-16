@@ -14,7 +14,7 @@ function AddFood({ addFoodItem }) {
 
     return (
         <div className="card mt-20">
-            <h3 className="text-center">Log Food</h3>
+            <h3 style={{ textAlign: 'center' }}>Log Food</h3>
             <div className="form-column">
                 <input
                     type="text"
