@@ -18,21 +18,19 @@ function Dashboard() {
       <CalorieDisplay CurrentCalories={caloriesRemaining} onUpdateGoal={setCalories} />
       <AddFood addFoodItem={addFoodItem} />
 
-      <div className="card" style={{ marginTop: '20px' }}>
-        <h3 style={{ textAlign: 'center' }}>History</h3>
-        {foodLog.length === 0 ? <p style={{ textAlign: 'center' }}>No food logged yet.</p> : (
-          <ul style={{ listStyle: 'none', padding: 0 }}>
+      <div className="card mt-20">
+        <h3 className="text-center">History</h3>
+        {foodLog.length === 0 ? <p className="text-center">No food logged yet.</p> : (
+          <ul className="history-list">
             {foodLog.map((item, index) => (
-              <li key={index} style={{ borderBottom: '1px solid #eee', padding: '10px 0', display: 'flex', justifyContent: 'space-between' }}>
+              <li key={index} className="history-item">
                 <span>{item.name}</span>
-                <span style={{ fontWeight: 'bold' }}>{item.calories}</span>
+                <span className="history-calories">{item.calories}</span>
               </li>
             ))}
           </ul>
         )}
       </div>
-
-
     </div>
   )
 }
