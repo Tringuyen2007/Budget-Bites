@@ -68,6 +68,57 @@ button:focus-visible {
   text-align: center;
 }
 
+/* Margin Utilities */
+.mt-20 {
+  margin-top: 20px;
+}
+
+.relative-container {
+  position: relative;
+}
+
+/* Form & Input Styles */
+.input-field {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  /* Added border for better visibility */
+  border-radius: 4px;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Calorie Display Specifics */
+.edit-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.edit-form-container {
+  padding: 10px 0;
+}
+
+.edit-form-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.edit-input-small {
+  width: 100px;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

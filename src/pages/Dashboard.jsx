@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import CalorieDisplay from '../components/CalorieDisplay'
-import EditGoal from '../components/EditGoal'
 import AddFood from '../components/AddFood'
 
 function Dashboard() {
@@ -16,8 +15,7 @@ function Dashboard() {
 
   return (
     <div className="app-container">
-      <CalorieDisplay CurrentCalories={caloriesRemaining} />
-      <EditGoal updateCalories={setCalories} />
+      <CalorieDisplay CurrentCalories={caloriesRemaining} onUpdateGoal={setCalories} />
       <AddFood addFoodItem={addFoodItem} />
 
       <div className="card" style={{ marginTop: '20px' }}>

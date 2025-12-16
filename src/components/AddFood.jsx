@@ -13,22 +13,22 @@ function AddFood({ addFoodItem }) {
     }
 
     return (
-        <div className="card" style={{ marginTop: '20px' }}>
-            <h3>Log Food</h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <div className="card mt-20">
+            <h3 className="text-center">Log Food</h3>
+            <div className="form-column">
                 <input
                     type="text"
                     value={foodName}
                     onChange={(e) => setFoodName(e.target.value)}
                     placeholder="Food Name (e.g. Apple)"
-                    style={{ padding: '8px', fontSize: '16px' }}
+                    className="input-field"
                 />
                 <input
                     type="number"
                     value={foodCalories}
                     onChange={(e) => setFoodCalories(e.target.value)}
                     placeholder="Calories"
-                    style={{ padding: '8px', fontSize: '16px' }}
+                    className="input-field"
                 />
                 <button onClick={handleSubmit}>Add Food</button>
             </div>
