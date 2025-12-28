@@ -2,7 +2,7 @@ import { useState } from "react";
 function Profile() {
     const [profileImage, setProfileImage] = useState("https://via.placeholder.com/150");
 
-    // 2. Handler function that runs when the user selects a file
+    // handling function that runs when the people selects file
     const handleImageChange = (e) => {
         const file = e.target.files[0]; // Get the first selected file
         if (file) {
@@ -40,7 +40,7 @@ function Profile() {
                         />
                     </label>
                 </div>
-                {/* Future: Add height, weight, goal settings here */}
+                {/* TODO: Add height, weight, goal settings */}
             </div>
         </div>
     )
