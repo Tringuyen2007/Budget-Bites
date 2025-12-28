@@ -10,7 +10,7 @@ function Budget() {
         }
     }
     return (
-        <div className="budget-container">
+        <div className="card budget-container">
             <h2 id="budget">$ {budget}</h2>
             { }
             <div className="edit-form-container">
