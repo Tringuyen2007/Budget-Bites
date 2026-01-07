@@ -7,7 +7,6 @@ function Navbar() {
             <Link to="/Budget" className="nav-link">Budget</Link>
             <Link to="/Foodlog" className="nav-link">Foodlog</Link>
             <Link to="/profile" className="nav-link">Profile</Link>
-
         </nav>
     );
 }

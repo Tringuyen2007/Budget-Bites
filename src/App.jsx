@@ -4,6 +4,7 @@ import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
 import Budget from './pages/Budget';
 import FoodLog from './pages/Foodlog';
+import StreakDisplay from './components/StreakDisplay';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/budget" element={<Budget />} />
+                    <Route path="/foodlog" element={<FoodLog />} />
                 </Routes>
                 <Navbar />
             </div>
