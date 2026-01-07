@@ -3,6 +3,7 @@ import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
 import Budget from './pages/Budget';
+import FoodLog from './pages/Foodlog';
 
 function App() {
     return (

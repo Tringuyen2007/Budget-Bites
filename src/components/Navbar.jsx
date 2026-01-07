@@ -5,6 +5,7 @@ function Navbar() {
         <nav className="bottom-nav">
             <Link to="/" className="nav-link">Dashboard</Link>
             <Link to="/Budget" className="nav-link">Budget</Link>
+            <Link to="/Foodlog" className="nav-link">Foodlog</Link>
             <Link to="/profile" className="nav-link">Profile</Link>
 
         </nav>
