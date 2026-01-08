@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Budget from './pages/Budget';
 import FoodLog from './pages/Foodlog';
 import StreakDisplay from './components/StreakDisplay';
+import MealSelect from './components/MealSelect';
 
 function App() {
     const [goalCalories, setGoalCalories] = useState(2000);
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/budget" element={<Budget />} />
                     <Route path="/foodlog" element={<FoodLog goalCalories={goalCalories} />} />
+                    <Route path="/mealselect" element={<MealSelect />} />
                 </Routes>
                 <Navbar />
             </div>
