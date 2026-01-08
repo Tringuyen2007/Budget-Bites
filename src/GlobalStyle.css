@@ -228,12 +228,21 @@ button:focus-visible {
 }
 
 /* streak display color and icon*/
-.streak-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.card-streak-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #77adff;
+  color: #333333;
+  padding: 15px 40px 15px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 8px;
   font-weight: bold;
   font-size: 16px;
@@ -294,4 +303,15 @@ button:focus-visible {
   50% {
     opacity: 1;
   }
+}
+
+/* food log container*/
+.card-foodlog {
+  width: 100%;
+  padding: 20px;
+  padding-top: 80px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 8px;
 }
