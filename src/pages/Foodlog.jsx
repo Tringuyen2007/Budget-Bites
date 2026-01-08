@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import StreakDisplay from '../components/StreakDisplay';
 import MealSelect from '../components/MealSelect';
+import AddFoodModal from '../components/AddFoodModal';
 
 function FoodLog({ goalCalories }) {
     const [consumedCalories, setConsumedCalories] = useState(0);
     const remaining = goalCalories - consumedCalories;
-
+    //food log
     const [meals, setMeals] = useState({
         Breakfast: [],
         Lunch: [],
@@ -13,8 +14,13 @@ function FoodLog({ goalCalories }) {
         Snacks: []
     });
     const handleAddFood = (mealType) => {
-        console.log(`Add food to ${mealType}`);
+        SetCurrentMeal(mealType);
+        setIsModalOpen(true);
     };
+
+    //food modal const
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentMeal, SetCurrentMeal] = useState('');
     return (
         <div className="food-log-container">
             <div className="card-foodlog">
@@ -22,10 +28,10 @@ function FoodLog({ goalCalories }) {
                 <p>Goal: {goalCalories} | Consumed: {consumedCalories}</p>
             </div>
             <StreakDisplay />
-            {/* <MealSelect
+            <MealSelect
                 mealName="Breakfast"
                 foods={meals.Breakfast}
-                onAddFood={() => handleAddFood('Breakfast')} /> */}
+                onAddFood={() => handleAddFood('Breakfast')} />
             <MealSelect
                 mealName="Lunch"
                 foods={meals.Lunch}
@@ -38,6 +44,10 @@ function FoodLog({ goalCalories }) {
                 mealName="Snacks"
                 foods={meals.Snacks}
                 onAddFood={() => handleAddFood('Snacks')} />
+            <AddFoodModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
 
         </div>
     );
