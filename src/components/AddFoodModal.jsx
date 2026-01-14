@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import AddFoodTab from './AddFoodTab';
+import MyRecipesTab from './MyRecipesTab';
+import MyMealsTab from './MyMealsTab';
 
-function AddFoodModal({ isOpen, onClose }) {
+function AddFoodModal({ isOpen, onClose, currentMeal }) {
     const [activeTab, setActiveTab] = useState('addfood')
     if (!isOpen) return null;
     return (
@@ -22,19 +25,16 @@ function AddFoodModal({ isOpen, onClose }) {
                 <div className="tab-content">
                     {activeTab === 'addfood' && (
                         <AddFoodTab
-                            onAddFood={onAddFood}
                             currentMeal={currentMeal}
                         />
                     )}
                     {activeTab === 'recipes' && (
                         <MyRecipesTab
-                            onAddRecipe={onAddFood}
                             currentMeal={currentMeal}
                         />
                     )}
                     {activeTab === 'meals' && (
                         <MyMealsTab
-                            onAddMeal={onAddFood}
                             currentMeal={currentMeal}
                         />
                     )}

@@ -47,6 +47,7 @@ function FoodLog({ goalCalories }) {
             <AddFoodModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
+                currentMeal={currentMeal}
             />
 
         </div>
