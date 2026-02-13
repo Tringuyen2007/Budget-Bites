@@ -1,3 +1,4 @@
+import './Dashboard.css';
 import CalorieDisplay from '../components/CalorieDisplay'
 
 function Dashboard({ goalCalories, setGoalCalories }) {

@@ -1,0 +1,110 @@
+/* Streak Display */
+.card-streak-container {
+    width: 100%;
+    background-color: #77adff;
+    color: #333333;
+    padding: 15px 40px 15px 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.fire-icon {
+    width: 20px;
+    height: 28px;
+    background: linear-gradient(to top, #ff4500, #ff6b35, #ffa500);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    animation: flicker 1.5s infinite alternate;
+    transform: rotate(-5deg);
+}
+
+.fire-icon::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 18px;
+    background: linear-gradient(to top, #ff6b35, #ffd700);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    top: 5px;
+    left: 5px;
+    animation: innerFlicker 1.2s infinite alternate;
+}
+
+.fire-icon::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    background: #ffd700;
+    border-radius: 50%;
+    top: 8px;
+    left: 8px;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) scale(1) translateY(0);
+    }
+
+    50% {
+        transform: rotate(5deg) scale(1.08) translateY(-3px);
+    }
+}
+
+@keyframes innerFlicker {
+
+    0%,
+    100% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Food Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.modal-content button {
+    margin-top: 10px;
+}
+
+.card-foodlog-modal {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}

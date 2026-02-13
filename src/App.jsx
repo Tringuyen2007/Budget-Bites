@@ -5,7 +5,6 @@ import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
 import Budget from './pages/Budget';
 import FoodLog from './pages/Foodlog';
-import StreakDisplay from './components/StreakDisplay';
 import MealSelect from './components/MealSelect';
 
 function App() {

@@ -1,0 +1,12 @@
+/* Budget Page Styles */
+
+.budget-container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.budget-title {
+    margin-bottom: 10px;
+}

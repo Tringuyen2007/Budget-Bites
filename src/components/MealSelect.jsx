@@ -1,5 +1,3 @@
-import React from 'react';
-
 function MealSelect({ mealName, foods, onAddFood }) {
     return (
         <div className="card-meal">

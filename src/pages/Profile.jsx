@@ -1,14 +1,22 @@
 import { useState } from "react";
+import './Profile.css';
 function Profile() {
-    const [profileImage, setProfileImage] = useState("https://via.placeholder.com/150");
+    // Load saved image from localStorage, or fall back to placeholder
+    const [profileImage, setProfileImage] = useState(
+        () => localStorage.getItem("profileImage") || "https://via.placeholder.com/150"
+    );
 
-    // handling function that runs when the people selects file
+    // handling function that runs when the user selects a file
     const handleImageChange = (e) => {
         const file = e.target.files[0]; // Get the first selected file
         if (file) {
-            // Create a temporary URL for the selected file to preview it
-            const imageUrl = URL.createObjectURL(file);
-            setProfileImage(imageUrl);
+            // Convert file to base64 data URL so it can be saved in localStorage
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setProfileImage(reader.result);
+                localStorage.setItem("profileImage", reader.result);
+            };
+            reader.readAsDataURL(file);
         }
     };
 

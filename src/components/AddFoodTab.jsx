@@ -1,6 +1,3 @@
-import React from 'react';
-import { useState } from 'react';
-
 function AddFoodTab({ currentMeal }) {
     return (
         <div>

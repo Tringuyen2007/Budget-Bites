@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Budget.css';
 
 function Budget() {
     const [budget, setBudget] = useState(100);
@@ -10,20 +11,21 @@ function Budget() {
         }
     }
     return (
-        <div className="card budget-container">
-            <h2 id="budget">$ {budget}</h2>
-            { }
-            <div className="edit-form-container">
-                <h3 className="budget-title">Set Budget</h3>
-                <div className="edit-form-row">
-                    <input
-                        type="number"
-                        placeholder="Amount in USD"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        className="input-field"
-                    />
-                    <button onClick={handleUpdate}>Update</button>
+        <div className="app-container">
+            <div className="card text-center budget-container">
+                <h2 id="budget">$ {budget}</h2>
+                <div className="edit-form-container">
+                    <h3 className="budget-title">Set Budget</h3>
+                    <div className="edit-form-row">
+                        <input
+                            type="number"
+                            placeholder="Amount in USD"
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            className="input-field"
+                        />
+                        <button onClick={handleUpdate}>Update</button>
+                    </div>
                 </div>
             </div>
         </div>
