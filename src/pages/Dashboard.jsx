@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import CalorieDisplay from '../components/CalorieDisplay'
 
 function Dashboard({ goalCalories, setGoalCalories }) {

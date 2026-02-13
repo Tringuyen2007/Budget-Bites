@@ -1,18 +1,88 @@
-# React + Vite
+# 🍽️ Budget Bites
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fitness-focused calorie & budget tracking app built with **React + Vite**. Track your daily food intake, manage meal categories, set calorie goals, and keep an eye on your grocery budget — all in one place.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **📊 Dashboard** — View your daily calorie goal with an inline editor to adjust it on the fly
+- **🍳 Food Log** — Log meals across Breakfast, Lunch, Dinner & Snacks with a tabbed modal interface
+- **🔥 Streak Tracker** — Animated fire icon showing your consecutive logging streak
+- **💰 Budget Tracker** — Set and update a weekly grocery budget
+- **👤 Profile** — Upload and preview a profile photo
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer     | Technology                      |
+| --------- | ------------------------------- |
+| Framework | React 19                        |
+| Bundler   | Vite                            |
+| Routing   | React Router DOM                |
+| Styling   | Vanilla CSS (single stylesheet) |
+| Linting   | ESLint                          |
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── main.jsx                 # Entry point — mounts <App /> into the DOM
+├── App.jsx                  # Router setup & shared state (goalCalories)
+├── GlobalStyle.css          # All application styles
+│
+├── pages/
+│   ├── Dashboard.jsx        # Home — calorie goal display & editor
+│   ├── Foodlog.jsx          # Meal logging — categories + modal
+│   ├── Budget.jsx           # Grocery budget tracker
+│   └── Profile.jsx          # User profile & image upload
+│
+└── components/
+    ├── Navbar.jsx            # Fixed bottom navigation bar
+    ├── CalorieDisplay.jsx    # Editable calorie goal widget
+    ├── StreakDisplay.jsx     # Day-streak counter with fire animation
+    ├── MealSelect.jsx        # Meal category card (list + add button)
+    ├── AddFood.jsx           # Standalone food entry form
+    ├── AddFoodModal.jsx      # Modal with tabbed food entry
+    ├── AddFoodTab.jsx        # "Add Food" search tab
+    ├── MyMealsTab.jsx        # "My Meals" tab (placeholder)
+    └── MyRecipesTab.jsx      # "My Recipes" tab (placeholder)
+```
 
+## 🔄 Data Flow
 
+```
+App.jsx  ← owns goalCalories state
+ ├─ Dashboard  ← goalCalories + setGoalCalories
+ │    └─ CalorieDisplay  ← renders / edits the goal
+ ├─ FoodLog  ← goalCalories (read-only)
+ │    ├─ StreakDisplay
+ │    ├─ MealSelect × 4
+ │    └─ AddFoodModal
+ │         ├─ AddFoodTab
+ │         ├─ MyRecipesTab
+ │         └─ MyMealsTab
+ ├─ Budget  (independent state)
+ └─ Profile  (independent state)
+```
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## 📝 Roadmap
+
+- [ ] Wire up food logging so saved items update calories consumed
+- [ ] Persist data with `localStorage` or a backend
+- [ ] Add streak calculation logic
+- [ ] Add height, weight, and goal settings to Profile
+- [ ] Split CSS into component-level modules
+- [ ] Integrate a nutrition API for food search
+- [ ] Backend with FastAPI + PostgreSQL
+- [ ] AI-generated meal plans & grocery lists
