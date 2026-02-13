@@ -1,16 +1,16 @@
-# 🍽️ Budget Bites
+# Budget Bites
 
 A fitness-focused calorie & budget tracking app built with **React + Vite**. Track your daily food intake, manage meal categories, set calorie goals, and keep an eye on your grocery budget — all in one place.
 
-## ✨ Features
+## Features
 
-- **📊 Dashboard** — View your daily calorie goal with an inline editor to adjust it on the fly
-- **🍳 Food Log** — Log meals across Breakfast, Lunch, Dinner & Snacks with a tabbed modal interface
-- **🔥 Streak Tracker** — Animated fire icon showing your consecutive logging streak
-- **💰 Budget Tracker** — Set and update a weekly grocery budget
-- **👤 Profile** — Upload and preview a profile photo
+- **Dashboard** — View your daily calorie goal with an inline editor to adjust it on the fly
+- **Food Log** — Log meals across Breakfast, Lunch, Dinner & Snacks with a tabbed modal interface
+- **Streak Tracker** — Animated fire icon showing your consecutive logging streak
+- **Budget Tracker** — Set and update a weekly grocery budget
+- **Profile** — Upload and preview a profile photo
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer     | Technology                      |
 | --------- | ------------------------------- |
@@ -20,7 +20,7 @@ A fitness-focused calorie & budget tracking app built with **React + Vite**. Tra
 | Styling   | Vanilla CSS (single stylesheet) |
 | Linting   | ESLint                          |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -46,7 +46,7 @@ src/
     └── MyRecipesTab.jsx      # "My Recipes" tab (placeholder)
 ```
 
-## 🔄 Data Flow
+## Data Flow
 
 ```
 App.jsx  ← owns goalCalories state
@@ -63,7 +63,7 @@ App.jsx  ← owns goalCalories state
  └─ Profile  (independent state)
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
 # Install dependencies
@@ -76,7 +76,7 @@ npm run dev
 npm run build
 ```
 
-## 📝 Roadmap
+## Roadmap
 
 - [ ] Wire up food logging so saved items update calories consumed
 - [ ] Persist data with `localStorage` or a backend
